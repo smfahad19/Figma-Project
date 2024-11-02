@@ -27,33 +27,32 @@ const data = [
     des: "Graphic Designer",
   },
 ];
-
 const Portfolio = () => {
   return (
-    <div className="mb-[100px]">
-      <div className="gap-3 text-center">
-        <h2 className="text-3xl font-semibold text-gray-500 mt-[150px] mb-[10px]">Logos, website, book covers & more!</h2>
-        <h1 className="text-5xl font-semibold mb-[90px]">
+    <div className="mb-[100px] px-4 md:px-10 lg:px-20">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-semibold ml-[70px] md:ml-[] text-gray-500 mt-[150px] mb-2">
+          Logos, website, book covers & more!
+        </h2>
+        <h1 className="text-5xl ml-[70px] md:ml-[] font-semibold mb-10">
           Checkout The Best <span className="text-sky-500">Portfolios</span>{" "}
           Here
         </h1>
       </div>
-      <div className="grid mr-[100px] ml-[100px] grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 ml-[80px] sm:grid-cols-2 md:grid-cols-3 gap-6">
         {data.map((item) => {
           return (
-            <div className="relative rounded-lg ml-[100px] w-[300px] bg-white h-[350px] shadow-xl">
+            <div key={item.id} className="relative rounded-lg w-[300px] bg-white shadow-xl">
               <img
                 src={item.img}
                 alt={item.name}
-                className="object-cover  w-full rounded"
+                className="object-cover w-full h-48 rounded-t-lg"
               />
-                <div className="flex justify-between items-center">
-                  <h1 className="text-2xl mt-[20px] font-semibold ml-[20px]">
-                    {item.desTitle}
-                  </h1>
-                  <FaArrowRightLong  className="text-blue-500 text-2xl mt-[25px] mr-[20px]"/>
-                </div>
-              <p className="ml-[20px] ">{item.des}</p>
+              <div className="flex justify-between items-center p-4">
+                <h1 className="text-2xl font-semibold">{item.desTitle}</h1>
+                <FaArrowRightLong className="text-blue-500 text-2xl" />
+              </div>
+              <p className="p-4 text-gray-600">{item.des}</p>
             </div>
           );
         })}

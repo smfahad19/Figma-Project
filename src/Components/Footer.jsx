@@ -4,12 +4,12 @@ function Footer() {
   return (
     <>
       {" "}
-      <footer className="mainfootcont flex items-center justify-center min-h-[45dvh] bg-gray-100">
+      <footer className="mainfootcont flex items-center justify-center min-h-[45dvh] md: bg-gray-100 md:w-full w-[497px]">
         <div className="w-[90%] ">
           <div className="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
             <div className="p-5 w-full ">
               <h3 className="font-bold text-xl text-indigo-600">
-                <img src={footerimg} alt="" className="w-[60%] h-[50px] rounded-full" />
+                <img src={footerimg} alt="" className="w-[120px] h-[50px]  rounded-full" />
               </h3>
               <p className="mt-3 text-xs">
                 Powerful Freelance Marketplace System with ability to change the

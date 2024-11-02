@@ -23,15 +23,15 @@ const Category = () => {
   return (
     <div>
       <div>
-        <h1 className="flex gap-3 text-4xl justify-center font-semibold ">
-          Choose Different <span className="text-blue-500">Category</span>
+        <h1 className="flex ml-[50px] gap-3 text-4xl justify-center font-semibold">
+          Choose Different <span className=" text-blue-500">Category</span>
         </h1>
       </div>
-      <div className="ml-[240px] mr-[210px] justify-center mt-[80px] grid grid-cols-4 rounded-2xl gap-6">
+      <div className="mx-auto justify-center mt-[80px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {data.map((category) => (
           <div
             key={category.id}
-            className="relative flex flex-col items-center border rounded-lg shadow-md w-[190px] h-[180px] overflow-hidden group cursor-pointer"
+            className="relative ml-[50px] md:ml-[100px] flex flex-col items-center border rounded-lg shadow-md w-[190px] h-[180px] overflow-hidden group cursor-pointer"
           >
             <img
               src={category.img}
